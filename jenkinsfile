@@ -7,5 +7,15 @@ stages
     {
         steps{sh 'echo hi jenkins'}
     }
+    
+    stage('execute test')
+    {
+        steps{sh 'echo executing test cases'}
+    }
+    
+    stage('deploy')
+    {
+        steps{sh 'echo deploy'}
+    }
 }
 }
