@@ -1,0 +1,11 @@
+pipeline
+{
+agent any
+stages
+{
+    stage('hello jenkins')
+    {
+        steps{sh 'echo hi jenkins'}
+    }
+}
+}
