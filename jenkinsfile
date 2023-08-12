@@ -5,7 +5,8 @@ stages
 {
     stage('hello jenkins')
     {
-        steps{sh 'echo hi jenkins'}
+        steps{sh 'echo hi jenkins'
+               sh 'echo bye jenkins'}
     }
     
     stage('execute test')
