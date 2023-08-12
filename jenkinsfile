@@ -10,12 +10,15 @@ stages
     
     stage('execute test')
     {
-        steps{sh 'echo executing test cases'}
-    }
-    
-    stage('deploy')
-    {
-        steps{sh 'echo deploy'}
+        parallel
+        {
+            stage(execute unit test)
+            {steps{sh 'echo execute unit test'}}
+            stage(execute component test)
+            {
+                steps{sh 'echo execute component test'}
+            }
+        }
     }
 }
 }
