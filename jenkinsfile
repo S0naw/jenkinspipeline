@@ -12,9 +12,10 @@ stages
     {
         parallel
         {
-            stage(execute unit test)
-            {steps{sh 'echo execute unit test'}}
-            stage(execute component test)
+            stage('execute unit test')
+            {
+                steps{sh 'echo execute unit test'}}
+            stage('execute component test')
             {
                 steps{sh 'echo execute component test'}
             }
